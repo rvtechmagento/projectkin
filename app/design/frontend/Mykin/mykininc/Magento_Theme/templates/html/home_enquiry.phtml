@@ -1,0 +1,49 @@
+<div class="home_enq_form">
+	<form  class="form contact"
+      action="https://www.directautoelectrical.co.uk/new_mage/send-partenquiry.php"
+      id="contact-form"
+      method="post"
+      data-hasrequired="<?php /* @escapeNotVerified */ echo __('* Required Fields') ?>"
+      data-mage-init='{"validation":{}}'>
+      	<fieldset class="fieldset">
+      		<div class="field name required">
+      			<div class="control">
+      				<span class="col-md-6 col-sm-12 lt_col"><input type="text" id="name" name="name" data-validate="{required:true}" class="form-control input-text" placeholder="Name"></span>
+                	
+            	</div>
+      		</div>
+      		<div class="field email required">
+      			<div class="control">
+      				<span class="col-md-6 col-sm-12 rt_col"><input type="text" data-validate="{required:true, 'validate-email':true}" name="email" class="form-control input-text" placeholder="Email Address"></span>
+                	
+            	</div>
+      		</div>
+      		<div class="field phone required">
+      			<div class="control">
+      				<span class="col-md-6 col-sm-12 lt_col"><input type="text" data-validate="{required:true}" name="phone" class="form-control input-text" placeholder="Phone"></span>
+                	
+            	</div>
+      		</div>
+      		<div class="field reg-no required">
+      			<div class="control">
+      				<span class="col-md-6 col-sm-12 rt_col"><input type="text" data-validate="{required:true}" name="reg-no" class="form-control input-text" placeholder="Reg No."></span>
+                	
+            	</div>
+      		</div>
+      		<div class="field">
+      			<div class="control">
+      				<p>Unit Type</p><p><input type="radio" value="Starter Mortor" name="unit_type"><span class="mg-right">Starter Motor</span> <input type="radio" value="Alternator" name="unit_type">
+              <span> Alternator</span></p>
+      			</div>
+      		</div>
+      		<div class="field">
+      			<div class="control">
+						<textarea class="form-control input-text" name="comment" id="comment" rows="8" placeholder="Message"></textarea>
+      			</div>
+		</fieldset>
+		<div class="text_field clearfix">
+			<input type="submit" class="submit_btn" name="submit">			
+		</div>	
+		
+	</form>
+</div>

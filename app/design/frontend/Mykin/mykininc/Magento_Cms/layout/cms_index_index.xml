@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+     <!-- <head>
+        <script src="slick/slick.min.js"/>
+        <link src="Slick_Slider::slick/slick.min.js"/>
+    </head> -->
+    <body>
+    	<referenceContainer name="page.wrapper">     
+		 	 <container name="home.banner" htmlTag="div" htmlClass="home-banner">
+                <block class="Magento\Cms\Block\Block" name="home_page_slider" after="page.top">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">home_page_slider</argument>
+                    </arguments>
+                </block>
+            </container>
+            <block class="Magento\Cms\Block\Block" name="home_below_slider" after="home_page_slider">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">home_latest_products</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Cms\Block\Block" name="home_page_about_us_section" after="home_below_slider">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">home_page_about_us_section</argument>
+                </arguments>
+            </block>
+             <block class="Magento\Cms\Block\Block" name="home_page_latest_news" after="home_page_about_us_section">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">home_page_latest_news</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+         <referenceBlock name="home.banner">
+            <container name="home_part" htmlTag="div" htmlClass="home-part">
+                <block class="Magento\Cms\Block\Block" name="number_plate" after="partfinder_selector">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">number_plate</argument>
+                    </arguments>
+                </block>
+            </container>
+        </referenceBlock>
+        <move element="partfinder_selector" destination="home_part" before="-"/>
+        <referenceBlock name="page.main.title" remove="true" />    
+        <move element="main" destination="page.wrapper" after="home_page_latest_news"/>  
+    </body>
+</page>

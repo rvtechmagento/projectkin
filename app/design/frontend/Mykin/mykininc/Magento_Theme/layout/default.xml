@@ -1,0 +1,58 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/logo.png</argument>
+                <argument name="logo_img_width" xsi:type="number">300</argument> 
+                <argument name="logo_img_height" xsi:type="number">300</argument>
+            </arguments>
+        </referenceBlock>
+    	<referenceBlock name="register-link" remove="true" />  
+        <referenceBlock name="authorization-link-login" remove="true" />      
+        <referenceBlock name="minicart" remove="true"/>  
+        
+        <referenceBlock name="header.panel">
+        	 <block class="Magento\Cms\Block\Block" name="header_top_left" before="-">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">header_top_left</argument>
+                </arguments>
+            </block>
+            
+            <container name="header.top.right.links" htmlTag="div" htmlClass="col-md-6 col-sm-6 top_right" after="header_top_left">
+                <container name="links.ul" htmlTag="div" htmlClass="top_right">
+                    <block class="Magento\Framework\View\Element\Template" name="right_links" template="Magento_Theme::html/top_right_links.phtml"/>
+                     <block class="Magento\Cms\Block\Block" name="header_top_right" before="header.links">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">header_top_right</argument>
+                        </arguments>
+                    </block>
+                </container>
+            </container>
+        </referenceBlock>
+       <!--  <referenceBlock name="header.top.right.links">
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="my-login">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Login</argument>
+                    <argument name="path" xsi:type="string">customer/account/login/</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="my-cart">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Cart</argument>
+                    <argument name="path" xsi:type="string">checkout/cart</argument>
+                </arguments>
+            </block>
+        </referenceBlock> -->
+        <referenceBlock name="footer_links" remove="true"/>
+        <referenceBlock name="header.links" remove="true"/>
+        <referenceBlock name="form.subscribe" remove="true" />
+        <referenceBlock name="footer-container">
+             <block class="Magento\Cms\Block\Block" name="footer_block" before="-">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer_block</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+        
+    </body>
+</page>	

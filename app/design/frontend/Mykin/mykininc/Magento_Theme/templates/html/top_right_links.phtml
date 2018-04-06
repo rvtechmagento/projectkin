@@ -1,0 +1,10 @@
+<?php 
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$customerSession = $objectManager->get('Magento\Customer\Model\Session');
+if($customerSession->isLoggedIn()) { ?>
+   <a class="login_link" href="<?php echo $this->getUrl('customer/account/logout'); ?>"><i class="icon-user"></i>LogOut</a>
+<?php }
+else{ ?>
+	<a class="login_link" href="<?php echo $this->getUrl('customer/account/login'); ?>"><i class="icon-user"></i>Login</a>
+<?php } ?>
+<a class="cart_link" href="<?php echo $this->getUrl('checkout/cart'); ?>"><i class="icon-shopping-cart"></i>Cart</a>
