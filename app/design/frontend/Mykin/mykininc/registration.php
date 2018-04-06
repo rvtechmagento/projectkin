@@ -5,6 +5,6 @@
  */
 \Magento\Framework\Component\ComponentRegistrar::register(
     \Magento\Framework\Component\ComponentRegistrar::THEME,
-    'frontend/Mykin/ma_carstore',
+    'frontend/Mykin/mykininc',
     __DIR__
 );
