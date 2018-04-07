@@ -29,6 +29,16 @@
                 </container>
             </container>
         </referenceBlock>
+
+        <referenceContainer name="header-wrapper">
+            <container name="header.search.right" htmlTag="div" htmlClass="col-md-3 col-sm-3 search_right" after="top.search">
+                  <block class="Magento\Cms\Block\Block" name="header_search_right">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">header_search_right</argument>
+                        </arguments>
+                    </block>
+            </container>
+        </referenceContainer>
        <!--  <referenceBlock name="header.top.right.links">
             <block class="Magento\Framework\View\Element\Html\Link\Current" name="my-login">
                 <arguments>

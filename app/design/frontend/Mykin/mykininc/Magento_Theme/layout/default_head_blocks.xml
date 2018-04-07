@@ -11,11 +11,11 @@
         <css src="slick/slick.css"/>
         <css src="css/bootstrap.min.css"/>
         <css src="font-awesome/css/font-awesome.min.css"/>
-        <css src="css/ma_carstore.css"/>
+        <css src="css/mykin.css"/>
         <css src="css/styles-m.css"/>
         <css src="css/styles-l.css" media="screen and (min-width: 768px)"/>
         <!-- <script src="js/jquery-2.1.1.js"/> -->
-        <script src="js/ma_carstore.js"/>
+        <script src="js/mykin.js"/>
         <script src="js/bootstrap.min.js"/>
        <!--  <script src="slick/slick.min.js"/> -->
     </head>
