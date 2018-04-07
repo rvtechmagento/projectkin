@@ -9,8 +9,9 @@
         </referenceBlock>
     	<referenceBlock name="register-link" remove="true" />  
         <referenceBlock name="authorization-link-login" remove="true" />      
-        <referenceBlock name="minicart" remove="true"/>  
-        
+      <!--   <referenceBlock name="minicart" remove="true"/>   -->
+         <move element="minicart" destination="header.top.right.links" before="links.ul"/>
+         <move element="authorization-link-login" destination="header.top.right.links" before="minicart"/>
         <referenceBlock name="header.panel">
         	 <block class="Magento\Cms\Block\Block" name="header_top_left" before="-">
                 <arguments>
@@ -57,7 +58,12 @@
         <referenceBlock name="header.links" remove="true"/>
         <referenceBlock name="form.subscribe" remove="true" />
         <referenceBlock name="footer-container">
-             <block class="Magento\Cms\Block\Block" name="footer_block" before="-">
+            <block class="Magento\Cms\Block\Block" name="footer_block_before" before="-">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer_form_block</argument>
+                </arguments>
+            </block>
+             <block class="Magento\Cms\Block\Block" name="footer_block" after="footer_block_before">
                 <arguments>
                     <argument name="block_id" xsi:type="string">footer_block</argument>
                 </arguments>

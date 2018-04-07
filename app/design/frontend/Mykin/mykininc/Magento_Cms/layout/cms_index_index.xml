@@ -19,12 +19,7 @@
                     </arguments>
                 </block>
             </container>
-            <block class="Magento\Cms\Block\Block" name="home_below_slider" after="home_page_slider">
-                <arguments>
-                    <argument name="block_id" xsi:type="string">home_latest_products</argument>
-                </arguments>
-            </block>
-            <block class="Magento\Cms\Block\Block" name="home_page_about_us_section" after="home_below_slider">
+            <block class="Magento\Cms\Block\Block" name="home_page_about_us_section" after="home_page_slider">
                 <arguments>
                     <argument name="block_id" xsi:type="string">home_page_about_us_section</argument>
                 </arguments>
