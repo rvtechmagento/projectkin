@@ -58,11 +58,9 @@
         <referenceBlock name="header.links" remove="true"/>
         <referenceBlock name="form.subscribe" remove="true" />
         <referenceBlock name="footer-container">
-            <block class="Magento\Cms\Block\Block" name="footer_block_before" before="-">
-                <arguments>
-                    <argument name="block_id" xsi:type="string">footer_form_block</argument>
-                </arguments>
-            </block>
+             <container name="footer.form" htmlTag="div" htmlClass="container footer_form" before="-">
+                  <block class="Magento\Contact\Block\ContactForm" name="contactFormcustom" template="Magento_Contact::form-footer.phtml"/>
+            </container>
              <block class="Magento\Cms\Block\Block" name="footer_block" after="footer_block_before">
                 <arguments>
                     <argument name="block_id" xsi:type="string">footer_block</argument>

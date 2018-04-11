@@ -16,5 +16,6 @@
                 <container name="form.additional.info" label="Form Additional Info"/>
             </block>
         </referenceContainer>
+        <referenceBlock name="footer.form" remove="true" />  
     </body>
 </page>
